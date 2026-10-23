@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { CSSProperties, ReactNode } from "react";
-import { Check, ChevronsDown, Gift, Minus, Plus, ShieldCheck, TriangleAlert } from "lucide-react";
+import { Check, ChevronsDown, Gift, Minus, Plus, ShieldCheck, Star, TriangleAlert } from "lucide-react";
 
 const IMG = "/assets";
 // TODO: trocar pelo link de checkout desta oferta (enquanto isso, os botões levam até a oferta).
@@ -452,6 +452,8 @@ export default function WatercolorPage() {
             <CtaButton href="#offer" className="mt-10">
               YES, I WANT TO START PAINTING!
             </CtaButton>
+
+            <SocialProof className="mt-7" />
           </Container>
         </WatercolorSection>
 
@@ -782,6 +784,38 @@ export default function WatercolorPage() {
           <p className="mt-4 text-muted">© 2026 All rights reserved.</p>
         </footer>
       </main>
+    </div>
+  );
+}
+
+/** Prova social do hero: avatares sobrepostos + nota, alunos e países. */
+function SocialProof({ className = "" }: { className?: string }) {
+  return (
+    <div className={`flex flex-col items-center gap-3 ${className}`}>
+      <div className="flex">
+        {[1, 2, 3, 4, 5].map((n) => (
+          <Image
+            key={n}
+            src={`${IMG}/avatar-${n}.webp`}
+            alt=""
+            width={160}
+            height={160}
+            className="-ml-3 h-12 w-12 rounded-full border-[3px] border-white object-cover shadow-[0_4px_10px_rgba(35,75,62,0.15)] first:ml-0"
+          />
+        ))}
+      </div>
+      <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-1 text-[15px] font-medium text-muted">
+        <span className="inline-flex items-center gap-1.5">
+          <strong className="font-bold text-ink">4.8</strong>
+          <Star className="h-4 w-4 fill-[#f5b301] text-[#f5b301]" strokeWidth={0} aria-label="stars" />
+        </span>
+        <span>
+          <strong className="font-bold text-love-500">11.7k</strong> students
+        </span>
+        <span>
+          <strong className="font-bold text-love-500">+79</strong> countries
+        </span>
+      </div>
     </div>
   );
 }
