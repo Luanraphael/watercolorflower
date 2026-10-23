@@ -12,7 +12,7 @@ const display = "font-display";
 
 const MAIN_PRODUCT = "100 Step-by-Step Watercolor Flower Course";
 
-const HERO_BULLETS = ["Lifetime access", "Instant delivery to your email", "7-day money-back guarantee"];
+const HERO_BULLETS = ["Lifetime access", "Instant delivery to your email", "30-day money-back guarantee"];
 
 const INCLUDES = [
   "Learn to paint 100 beautiful watercolor flowers from scratch, with clear visual instructions that guide you from your first brushstroke to the finished painting.",
@@ -29,7 +29,7 @@ const INCLUDES = [
 ];
 
 const TRUST_BADGES = [
-  { label: "7-Day Guarantee", icon: null },
+  { label: "30-Day Guarantee", icon: null },
   { label: "Instant Access", icon: "icone-acesso.png" },
   { label: "Friendly Support", icon: "icone-suporte.png" },
   { label: "Satisfaction Guaranteed", icon: "icone-satisfacao.png" },
@@ -94,24 +94,6 @@ const FIRST_BONUS = {
 const BONUSES = [
   { title: "55 Birds", img: "bonus-55-birds.png", price: "$27.00" },
   { title: "25 Fruits & Berries", img: "bonus-25-fruits.png", price: "$19.00" },
-];
-
-const FEATURES = [
-  {
-    img: "icone-imprime.jpg",
-    title: "Print it or paint from your screen",
-    text: "Download the course pages and use them however you like: printed next to your palette, or open on your tablet or phone while you paint.",
-  },
-  {
-    img: "icone-acceso-seguro.png",
-    title: "Instant, secure access",
-    text: "As soon as your payment is confirmed, you'll get a direct download link by email. No waiting around.",
-  },
-  {
-    img: "icone-download.png",
-    title: "Neatly organized",
-    text: "The whole course is sorted by flower, so you can quickly find the one you want to paint next.",
-  },
 ];
 
 const WHY = [
@@ -185,7 +167,7 @@ const FAQ: { q: string; a: ReactNode }[] = [
     q: "Is there a guarantee?",
     a: (
       <>
-        Yes! Your purchase is covered by our <strong>7-day money-back guarantee</strong>.
+        Yes! Your purchase is covered by our <strong>30-day money-back guarantee</strong>.
         <br />
         Take your time to explore everything, and if it&apos;s not what you expected for any reason, you can ask for a
         full refund. No hassle, no questions asked.
@@ -582,7 +564,7 @@ export default function WatercolorPage() {
           </Container>
         </WatercolorSection>
 
-        {/* 7 · Depoimentos + benefícios práticos */}
+        {/* 7 · Depoimentos */}
         <LightSection>
           <Container>
             <SectionTitle>
@@ -598,32 +580,6 @@ export default function WatercolorPage() {
             className="mt-6"
           />
 
-          <Container className="mt-16">
-            <h2 className={`${display} clay-text-gradient text-center text-5xl font-black leading-[1.1] tracking-tight md:text-6xl`}>
-              Made to make painting easy
-            </h2>
-            <div className="mt-8 flex justify-center">
-              <IconOrb>
-                <ChevronsDown className="h-8 w-8" strokeWidth={3} />
-              </IconOrb>
-            </div>
-
-            <div className="mx-auto mt-12 flex max-w-[480px] flex-col gap-8">
-              {FEATURES.map((f) => (
-                <div key={f.title} className="clay-card flex flex-col items-center gap-4 rounded-[32px] p-8 text-center">
-                  <Image
-                    src={`${IMG}/${f.img}`}
-                    alt=""
-                    width={512}
-                    height={512}
-                    className="h-32 w-32 object-contain mix-blend-multiply"
-                  />
-                  <h3 className={`${display} text-2xl font-extrabold leading-tight text-ink`}>{f.title}</h3>
-                  <p className="text-base font-medium leading-relaxed text-muted">{f.text}</p>
-                </div>
-              ))}
-            </div>
-          </Container>
         </LightSection>
 
         {/* 8 · Why + Who it's for */}
@@ -717,9 +673,9 @@ export default function WatercolorPage() {
               <span className="clay-orb inline-flex h-[120px] w-[120px] items-center justify-center rounded-full bg-gradient-to-br from-[#3f9a7f] to-[#276b57] text-white">
                 <ShieldCheck className="h-16 w-16" strokeWidth={2.25} />
               </span>
-              <h2 className={`${display} text-3xl font-black tracking-tight text-ink sm:text-4xl`}>7-DAY MONEY-BACK GUARANTEE</h2>
+              <h2 className={`${display} text-3xl font-black tracking-tight text-ink sm:text-4xl`}>30-DAY MONEY-BACK GUARANTEE</h2>
               <p className="text-lg font-medium leading-relaxed text-muted">
-                Order with complete peace of mind. After your purchase, you&apos;ll have 7 days to explore the
+                Order with complete peace of mind. After your purchase, you&apos;ll have 30 days to explore the
                 whole course, and if it&apos;s not what you expected, just ask for a full refund. No hassle, no questions
                 asked.
               </p>
